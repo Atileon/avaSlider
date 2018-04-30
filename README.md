@@ -46,7 +46,7 @@ Once you've declare all arguments, lets create the slide with the following meth
         container.appendChild(divEl);
         divEl.appendChild(titleEl);
         divEl.appendChild(descEl);
-        
+        //It is under construction yet
     }
 ```
 ## Create Objects (project slides in this case) : 
