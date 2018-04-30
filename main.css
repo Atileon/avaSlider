@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ /* General rule for main container */
+#mainCont{
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    height: 600px;
+    /* border:1px solid black; */
+}
+/* ============== Ava slider rules ========== */
+#avaSlider{
+	width:100%;
+	height:100%;
+	/* border:1px solid red; */
+	background-size: cover;
+    background-position:center;
+    position: relative;
+
+    opacity: 1;
+    z-index: 90;
+}
+#prev, #next{
+    opacity: .4;
+    background: rgba(14,14,14,.1);
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+#next:hover, #prev:hover{
+    background: rgba(12,12,12,.7);
+    opacity: 1;
+}
+#prev{
+    left: 0;
+}
+#next{
+    right: 0;
+}
+#prev span, #next span{
+    position: relative;
+    display: block;
+    top: 45%;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+#prev span{
+    left: 0;
+    /* margin-left: 20%; */
+}
+#next span{
+    right: 0;
+    /* margin-right: 20%; */
+}
+
+
+
+.slide{
+	width: 100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+	/* border: 1px solid blue; */
+	margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+	box-shadow: 0px 2px 4px black;
+}
+/* =========== Fonts ========== 
+
+font-family: 'Audiowide', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Gugi', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Black Ops One', cursive; 
+
+==================================== */
+
+.slide-title, .slide-description{
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0px 2px 4px black;
+}
+.slide-title{
+    
+    padding: 1em;
+    
+    font-family: 'Audiowide', cursive;
+    font-size: 3em;
+    color: whitesmoke;
+    text-shadow: 0px 2px 4px black;
+    text-transform: uppercase;
+}
+.slide-description{
+    font-family: 'Gugi', cursive;
+    font-size: 1.2em;
+    color: white;
+    width: 80%;
+}
+/* =============SVG Arrows ========== */
+
+.next-arrow, .prev-arrow{
+    fill:rgba(255,255,255,.7);
+    stroke: rgb(255, 0, 0);
+    stroke-width: 30;
+    stroke-dasharray: 1352;
+    stroke-dashoffset: 1352;
+    transition: all .7s ease-in-out;
+}
+.next-arrow{
+    transform: translateX(-100px);
+}
+.prev-arrow{
+    transform: translateX(100px);
+}
+#next:hover svg .next-arrow{
+    /* fill: rgb(255, 255, 255); */
+    transform: translateX(0);
+    stroke-dashoffset: 0;
+}
+#prev:hover svg .prev-arrow{
+    /* fill: rgb(255, 255, 255); */
+    transform: translateX(0);
+    stroke-dashoffset: 0;
+}
+svg{
+    display: block;
+    /* border:1px solid blue; */
+}
