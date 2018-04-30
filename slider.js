@@ -13,14 +13,14 @@ class Project {
 	console.log('=====');
 	console.log(this.prDesc);	
 	}
-	createSlide(){
+    createSlide(){
         //This method create elements to be insert on DOM takin as refer the 
         // main container declared at constructor
         // Container must be created on HTML with the id 'avaSlider'
         let container = document.getElementById(this.container);
         // The slide and background of project (slide)
-		let divEl = document.createElement('div');
-		divEl.className = 'slide';
+        let divEl = document.createElement('div');
+        divEl.className = 'slide';
         divEl.style.backgroundImage = `url('${this.prImg}')`;
         // The title header
         let titleEl = document.createElement('h2');
@@ -57,7 +57,7 @@ p1.prImg = 'https://fakeimg.pl/1000x500/f17c07,125/fff/?text=one';
 p1.prUrl = 'www.p1.com';
 p1.title = 'Title 1';
 p1.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
-projects.push(p1);
+projects.push(p1); //this push the object into the projects array
 console.log(projects);
 
 let p2= new Project();
