@@ -1,8 +1,9 @@
 class Project {
-	constructor(img, url,title, description){
+	constructor(img, title, description, url, git = 'https://github.com/Atileon'){
     this.title= title; // Title of project
 	this.prImg = img; //Background image for the slide
-	this.prUrl = url; // Url of the project 
+    this.prUrl = url; // Url of the project
+    this.gitUrl = git; // github url
     this.prDesc= description; // Short description of project
     this.container = 'avaSlider';// Set the container Id
 	}
@@ -30,13 +31,52 @@ class Project {
         let descEl = document.createElement('p');
         descEl.className = 'slide-description';
         descEl.textContent = this.prDesc;
+
+        let linksEl = document.createElement('div');
+        linksEl.className = 'slide-links';
+
+        let wwwEl = document.createElement('a');
+        wwwEl.setAttribute('href',this.prUrl);
+        wwwEl.setAttribute('target','_blank');
+        linksEl.appendChild(wwwEl);
+
+        let iWorld = document.createElement('i');
+        iWorld.className = 'fas fa-globe fa-3x';
+        wwwEl.appendChild(iWorld);
+
+        let gitEl = document.createElement('a');
+        gitEl.setAttribute('href',this.gitUrl);
+        gitEl.setAttribute('target','_blank');
+        linksEl.appendChild(gitEl);
+
+        let iGit = document.createElement('i');
+        iGit.className = 'fab fa-github fa-3x';
+        gitEl.appendChild(iGit);
+
         // ===== Elements to append ====
         container.appendChild(divEl);
         divEl.appendChild(titleEl);
         divEl.appendChild(descEl);
+        divEl.appendChild(linksEl);
         
     }
-    
+    // createLinks(){
+    //     let container = document.getElementById(this.container);
+    //     let divEl = document.createElement('div');
+    //     divEl.className = 'slide-links';
+    //     container.appendChild(divEl);
+
+    //     // If repo exists
+    //     if(this.gitUrl !== null){
+    //         let gitEl = document.createElement('p');
+    //         gitEl.className = 'git-url';
+    //         gitEl.textContent = this.gitUrl;
+    //         divEl.appendChild(gitEl);// append to divEl
+    //     }else{
+    //         return;
+    //     }
+        
+    // }
 }
 
 
@@ -53,32 +93,36 @@ let slidesonDom = document.getElementsByClassName('slide');
 console.log(slidesonDom.length+' elements(slides) by now');
 
 let p1= new Project();
-p1.prImg = 'https://fakeimg.pl/1000x500/f17c07,125/fff/?text=one';
-p1.prUrl = 'www.p1.com';
+p1.prImg = 'https://picsum.photos/g/700/500?gravity=east';
+p1.prUrl = 'https://www.avacoding.com';
+// p1.gitUrl = 'https://github.com/Atileon/avaSlider';
 p1.title = 'Title 1';
-p1.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
+p1.prDesc = 'Nulla non metus non urna malesuada finibus. Suspendisse fringilla ex non magna porttitor, sodales pellentesque libero rhoncus. Aliquam nec egestas neque. Vivamus eu tellus sapien. Vivamus at hendrerit nulla, in semper odio. Nulla faucibus aliquet dolor vitae interdum. Sed sed felis quis justo posuere ultrices ac.';
 projects.push(p1); //this push the object into the projects array
 console.log(projects);
 
 let p2= new Project();
-p2.prImg = 'https://fakeimg.pl/1000x500/?text=two';
-p2.prUrl = 'www.p2.com';
+p2.prImg = 'https://picsum.photos/g/700/500?gravity=center';
+p2.prUrl = 'https://www.avacoding.com';
+p2.gitUrl = 'https://github.com/Atileon/avaSlider';
 p2.title = 'Title 2';
-p2.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
+p2.prDesc = 'Sed facilisis lacus rutrum consequat consequat. Proin felis magna, gravida in venenatis a, rhoncus eget arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent lobortis ex sed tortor pellentesque, ac sollicitudin sapien cursus. In hac habitasse platea dictumst.';
 projects.push(p2);
 
 let p3 = new Project();
-p3.prImg = 'https://fakeimg.pl/1000x500/?text=three';
-p3.prUrl = 'p3.com';
+p3.prImg = 'https://picsum.photos/g/700/500?gravity=west';
+p3.prUrl = 'https://www.avacoding.com';
+p3.gitUrl = 'https://github.com/Atileon/avaSlider';
 p3.title = 'Title 3';
-p3.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
+p3.prDesc = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra finibus sapien, in pulvinar neque lobortis in. In tempor consectetur euismod. Sed ipsum nulla, molestie vitae blandit et, finibus vitae ipsum. Nam mattis tellus ligula, nec lacinia velit varius eu. Curabitur malesuada velit massa, eget lacinia neque condimentum in. Integer metus .';
 projects.push(p3);
 
 let p4 = new Project();
-p4.prImg = 'https://fakeimg.pl/1000x500/?text=four';
-p4.prUrl = 'p4.com';
+p4.prImg = 'https://picsum.photos/g/700/500?gravity=north';
+p4.prUrl = 'https://www.avacoding.com';
+p4.gitUrl = 'https://github.com/Atileon/avaSlider';
 p4.title = 'Title 4';
-p4.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
+p4.prDesc = 'Sed ipsum nulla, molestie vitae blandit et, finibus vitae ipsum. Nam mattis tellus ligula, nec lacinia velit varius eu. Curabitur malesuada velit massa, eget lacinia neque condimentum in. Integer metus metus, euismod dapibus sodales eu, fringilla vitae felis. Fusce quis turpis id ante porta efficitur. ';
 projects.push(p4);
 
 
@@ -101,7 +145,7 @@ function reset(){
 // This will be the first slide to show 
 function startSlider(){
     reset();
-    slidesonDom[0].style.display = 'block';
+    slidesonDom[0].style.display = 'flex';
 }
 startSlider();
 
@@ -112,7 +156,7 @@ function prev(){
     console.log(current);
     current --;
     console.log(current);
-    slidesonDom[current].style.display = 'block';
+    slidesonDom[current].style.display = 'flex';
     console.log(current);
     
 }
@@ -131,7 +175,7 @@ function next(){
     console.log(current);
     current ++;
     console.log(current);
-    slidesonDom[current].style.display = 'block';
+    slidesonDom[current].style.display = 'flex';
     
 }
 nextBtn.addEventListener('click',function(){
