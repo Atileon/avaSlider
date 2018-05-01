@@ -31,24 +31,24 @@ class Project {
         let descEl = document.createElement('p');
         descEl.className = 'slide-description';
         descEl.textContent = this.prDesc;
-
+        //This create the div to contain links
         let linksEl = document.createElement('div');
         linksEl.className = 'slide-links';
-
+        // This create an 'a'element for the website link
         let wwwEl = document.createElement('a');
         wwwEl.setAttribute('href',this.prUrl);
         wwwEl.setAttribute('target','_blank');
         linksEl.appendChild(wwwEl);
-
+        // the website link
         let iWorld = document.createElement('i');
         iWorld.className = 'fas fa-globe fa-3x';
         wwwEl.appendChild(iWorld);
-
+        // This create another 'a' element this time for github link
         let gitEl = document.createElement('a');
         gitEl.setAttribute('href',this.gitUrl);
         gitEl.setAttribute('target','_blank');
         linksEl.appendChild(gitEl);
-
+        // the github link
         let iGit = document.createElement('i');
         iGit.className = 'fab fa-github fa-3x';
         gitEl.appendChild(iGit);
@@ -60,23 +60,7 @@ class Project {
         divEl.appendChild(linksEl);
         
     }
-    // createLinks(){
-    //     let container = document.getElementById(this.container);
-    //     let divEl = document.createElement('div');
-    //     divEl.className = 'slide-links';
-    //     container.appendChild(divEl);
-
-    //     // If repo exists
-    //     if(this.gitUrl !== null){
-    //         let gitEl = document.createElement('p');
-    //         gitEl.className = 'git-url';
-    //         gitEl.textContent = this.gitUrl;
-    //         divEl.appendChild(gitEl);// append to divEl
-    //     }else{
-    //         return;
-    //     }
-        
-    // }
+    
 }
 
 

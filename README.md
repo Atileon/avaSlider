@@ -27,8 +27,8 @@ Once you've declare all arguments, lets create the slide with the following meth
 ```javascript
     createSlide(){
         //This method create elements to be insert on DOM takin as refer the 
-        // main container declared at constructor by default
-
+        // main container declared at constructor
+        // Container must be created on HTML with the id 'avaSlider'
         let container = document.getElementById(this.container);
         // The slide and background of project (slide)
         let divEl = document.createElement('div');
@@ -42,11 +42,33 @@ Once you've declare all arguments, lets create the slide with the following meth
         let descEl = document.createElement('p');
         descEl.className = 'slide-description';
         descEl.textContent = this.prDesc;
+        //This create the div to contain links
+        let linksEl = document.createElement('div');
+        linksEl.className = 'slide-links';
+        // This create an 'a'element for the website link
+        let wwwEl = document.createElement('a');
+        wwwEl.setAttribute('href',this.prUrl);
+        wwwEl.setAttribute('target','_blank');
+        linksEl.appendChild(wwwEl);
+        // the website link
+        let iWorld = document.createElement('i');
+        iWorld.className = 'fas fa-globe fa-3x';
+        wwwEl.appendChild(iWorld);
+        // This create another 'a' element this time for github link
+        let gitEl = document.createElement('a');
+        gitEl.setAttribute('href',this.gitUrl);
+        gitEl.setAttribute('target','_blank');
+        linksEl.appendChild(gitEl);
+        // the github link
+        let iGit = document.createElement('i');
+        iGit.className = 'fab fa-github fa-3x';
+        gitEl.appendChild(iGit);
+
         // ===== Elements to append ====
         container.appendChild(divEl);
         divEl.appendChild(titleEl);
         divEl.appendChild(descEl);
-        //It is under construction yet
+        divEl.appendChild(linksEl);
     }
 ```
 ## Create Objects (project slides in this case) : 
