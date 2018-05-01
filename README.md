@@ -13,7 +13,7 @@ Well, It's based on class object that would create the slide for any new object 
 
     constructor(img, title, description, url, git = 'https://github.com/Atileon'){
     this.title= title; // Title of project
-	this.prImg = img; //Background image for the slide
+    this.prImg = img; //Background image for the slide
     this.prUrl = url; // Url of the project
     this.gitUrl = git; // github url
     this.prDesc= description; // Short description of project
