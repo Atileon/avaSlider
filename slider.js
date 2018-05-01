@@ -79,7 +79,7 @@ console.log(slidesonDom.length+' elements(slides) by now');
 let p1= new Project();
 p1.prImg = 'https://picsum.photos/g/700/500?gravity=east';
 p1.prUrl = 'https://www.avacoding.com';
-// p1.gitUrl = 'https://github.com/Atileon/avaSlider';
+p1.gitUrl = 'https://github.com/Atileon/avaSlider';
 p1.title = 'Title 1';
 p1.prDesc = 'Nulla non metus non urna malesuada finibus. Suspendisse fringilla ex non magna porttitor, sodales pellentesque libero rhoncus. Aliquam nec egestas neque. Vivamus eu tellus sapien. Vivamus at hendrerit nulla, in semper odio. Nulla faucibus aliquet dolor vitae interdum. Sed sed felis quis justo posuere ultrices ac.';
 projects.push(p1); //this push the object into the projects array
