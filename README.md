@@ -11,11 +11,11 @@ Well, It's based on class object that would create the slide for any new object 
 ```javascript
     // Assuming that I want to create Slides for my projects to show...
 
-    constructor(img, url,title, description){
-
+    constructor(img, title, description, url, git = 'https://github.com/Atileon'){
     this.title= title; // Title of project
-    this.prImg = img; //Background image for the slide
-    this.prUrl = url; // Url of the project 
+	this.prImg = img; //Background image for the slide
+    this.prUrl = url; // Url of the project
+    this.gitUrl = git; // github url
     this.prDesc= description; // Short description of project
     this.container = 'avaSlider';// Set the container Id
     //The container gotta be created on html to get in the slider
