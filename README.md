@@ -81,10 +81,11 @@ First things first
 You would create as many objects(slides) as you want declaring in this way:
 ```javascript
     let p1= new Project();
-    p1.prImg = 'https://fakeimg.pl/1000x500/f17c07,125/fff/?text=one';
-    p1.prUrl = 'www.p1.com';
+    p1.prImg = 'https://picsum.photos/g/700/500?gravity=east';
+    p1.prUrl = 'https://www.avacoding.com';
+    p1.gitUrl = 'https://github.com/Atileon/avaSlider';
     p1.title = 'Title 1';
-    p1.prDesc = 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dict';
+    p1.prDesc = 'Nulla non metus non urna malesuada finibus. Suspendisse fringilla ex non magna porttitor, sodales pellentesque libero rhoncus. Aliquam nec egestas neque. Vivamus eu tellus sapien. Vivamus at hendrerit nulla, in semper odio. Nulla faucibus aliquet dolor vitae interdum. Sed sed felis quis justo posuere ultrices ac.';
     projects.push(p1); //this push the object into the projects array
 ```
 
